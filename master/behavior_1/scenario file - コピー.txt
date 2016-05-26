@@ -1,0 +1,6 @@
+﻿192.168.10.16@^start(animations/Stand/Gestures/Yes_1) ^wait(animations/Stand/Gestures/Yes_1)@192.168.10.17@^start(animations/Stand/Gestures/Yes_1) ^wait(animations/Stand/Gestures/Yes_1)
+192.168.10.16@^start(animations/Stand/Gestures/Hey_1) \vct=180\僕の名前はきよしです ^wait(animations/Stand/Gestures/Hey_1)@192.168.10.17@
+192.168.10.16@@192.168.10.17@^start(animations/Stand/Gestures/Hey_2) 僕の名前はたかしです ^wait(animations/Stand/Gestures/Hey_2)
+192.168.10.16@^start(animations/Stand/Gestures/This_2) \vct=180\二人合わせて，きよたかブラザーズです ^wait(animations/Stand/Gestures/This_2)@192.168.10.17@^start(animations/Stand/Gestures/This_2) 二人合わせて，きよたかブラザーズです ^wait(animations/Stand/Gestures/This_2)
+192.168.10.16@^start(animations/Stand/Gestures/Excited_1) \vct=180\今日はみなさんと一緒に，ズンドコ体操をして，僕も健康になりたいと思います ^wait(animations/Stand/Gestures/Excited_1)@192.168.10.17@^start(animations/Stand/Gestures/Excited_1) 今日はみなさんと一緒に，ズンドコ体操をして，僕も健康になりたいと思います ^wait(animations/Stand/Gestures/Excited_1)
+192.168.10.16@^start(animations/Stand/Gestures/Salute_1)  \vct=180\よろしくお願いいたします ^wait(animations/Stand/Gestures/Salute_1)@192.168.10.17@^start(animations/Stand/Gestures/Salute_1)  よろしくお願いいたします ^wait(animations/Stand/Gestures/Salute_1)
