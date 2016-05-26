@@ -8,6 +8,7 @@
     <Resources>
         <File name="scenario file" src="behavior_1/scenario file.txt" />
         <File name="scenario file - コピー" src="behavior_1/scenario file - コピー.txt" />
+        <File name="scenario_noIP" src="behavior_1/scenario_noIP.txt" />
     </Resources>
     <Topics />
     <IgnoredPaths>

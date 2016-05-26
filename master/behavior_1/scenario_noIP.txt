@@ -1,0 +1,5 @@
+^start(animations/Stand/Gestures/Yes_1) ^wait(animations/Stand/Gestures/Yes_1)@^start(animations/Stand/Gestures/Yes_1) ^wait(animations/Stand/Gestures/Yes_1)
+^start(animations/Stand/Gestures/Hey_1) \vct=180\みなさーーーーーーーーーん ^wait(animations/Stand/Gestures/Hey_1)@
+@^start(animations/Stand/Gestures/Hey_2) 今日は、お呼びいただき、ありがとうございます ^wait(animations/Stand/Gestures/Hey_2)
+^start(animations/Stand/Gestures/Excited_1) \vct=180\これから、むねかた先生と一緒に，僕たちの、これまでの活動内容を、ご紹介します ^wait(animations/Stand/Gestures/Excited_1)@^start(animations/Stand/Gestures/Excited_1) これから、むねかた先生と一緒に，僕たちの、これまでの活動内容を、ご紹介します ^wait(animations/Stand/Gestures/Excited_1)
+^start(animations/Stand/Gestures/Salute_1)  \vct=180\よろしくお願いいたします ^wait(animations/Stand/Gestures/Salute_1)@^start(animations/Stand/Gestures/Salute_1)  よろしくお願いいたします ^wait(animations/Stand/Gestures/Salute_1)
