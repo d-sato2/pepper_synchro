@@ -79,6 +79,7 @@ class MyClass(GeneratedClass):
                 pass
 
     def onInput_onStart(self, p):
+        self.log(p)
         self.bIsRunning = True
         try:
             sentence = "\RSPD="+ str( self.getParameter("Speed (%)") ) + "\ "
@@ -159,7 +160,7 @@ class MyClass(GeneratedClass):
         cli = arr[0][1].encode('utf-8')
 
         self.ttsMas.raiseEvent("RemoteSynchronizer/to_A",mas)
-        self.ttsCli.raiseEvent("RemoteSynchronizer/to_B",cli)
+        # self.ttsCli.raiseEvent("RemoteSynchronizer/to_B",cli)
         pass
 
     def onInput_onStop(self):
@@ -173,8 +174,8 @@ class MyClass(GeneratedClass):
                             <Input name="input" type="1" type_size="1" nature="1" inner="0" tooltip="" id="4" />
                             <Output name="onStopped" type="0" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="5" />
                             <Parameter name="masterIP" inherits_from_parent="0" content_type="3" value="127.0.0.1" default_value="127.0.0.1" custom_choice="1" tooltip="" id="6" />
-                            <Parameter name="clientIP" inherits_from_parent="0" content_type="3" value="192.168.10.3" default_value="192.168.10.3" custom_choice="1" tooltip="" id="7" />
-                            <Parameter name="scenarioFile" inherits_from_parent="0" content_type="3" value="/scenario file.txt" default_value="/scenario file.txt" custom_choice="0" tooltip="" id="8" />
+                            <Parameter name="clientIP" inherits_from_parent="0" content_type="3" value="" default_value="192.168.10.3" custom_choice="1" tooltip="" id="7" />
+                            <Parameter name="scenarioFile" inherits_from_parent="0" content_type="3" value="/scenario_noIP.txt" default_value="/scenario file.txt" custom_choice="0" tooltip="" id="8" />
                         </Box>
                         <Box name="after_second" id="1" localization="8" tooltip="" x="237" y="154">
                             <bitmap>media/images/box/box-python-script.png</bitmap>
@@ -194,8 +195,8 @@ class MyClass(GeneratedClass):
         cliIP = str( self.getParameter("clientIP") )
         self.ttsMas = ALProxy("ALMemory", masIP, 9559)
         self.ttsCli = ALProxy("ALMemory", cliIP, 9559)
+        framemanager = ALProxy("ALFrameManager")
         scenarioFile = str( self.getParameter("scenarioFile") )
-        scenarioFile = "/scenario file.txt"
         scenarioFilePath = framemanager.getBehaviorPath(self.behaviorId) + scenarioFile
         scenario = codecs.open(scenarioFilePath, encoding='utf-8-sig')
         self.lines = scenario.readlines()
@@ -227,7 +228,7 @@ class MyClass(GeneratedClass):
             cli = self.arr[self.j][1]
 
             self.ttsMas.raiseEvent("RemoteSynchronizer/to_A",mas)
-            self.ttsCli.raiseEvent("RemoteSynchronizer/to_B",cli)
+            # self.ttsCli.raiseEvent("RemoteSynchronizer/to_B",cli)
 
             times = self.j + 1
             self.last_command(times)
@@ -254,8 +255,8 @@ class MyClass(GeneratedClass):
                             <Output name="last_command" type="0" type_size="2" nature="2" inner="0" tooltip="" id="7" />
                             <Output name="output_arr" type="0" type_size="1" nature="2" inner="0" tooltip="" id="8" />
                             <Parameter name="masterIP" inherits_from_parent="1" content_type="3" value="127.0.0.1" default_value="127.0.0.1" custom_choice="0" tooltip="" id="9" />
-                            <Parameter name="clientIP" inherits_from_parent="0" content_type="3" value="192.168.10.3" default_value="192.168.10.3" custom_choice="1" tooltip="" id="10" />
-                            <Parameter name="scenarioFile" inherits_from_parent="0" content_type="3" value="/scenario file.txt" default_value="/scenario file.txt" custom_choice="0" tooltip="" id="11" />
+                            <Parameter name="clientIP" inherits_from_parent="0" content_type="3" value="" default_value="192.168.10.3" custom_choice="1" tooltip="" id="10" />
+                            <Parameter name="scenarioFile" inherits_from_parent="0" content_type="3" value="/scenario_noIP.txt" default_value="/scenario file.txt" custom_choice="0" tooltip="" id="11" />
                         </Box>
                         <Box name="first_text (1)" id="3" localization="8" tooltip="" x="95" y="312">
                             <bitmap>media/images/box/box-python-script.png</bitmap>
@@ -403,11 +404,10 @@ class MyClass(GeneratedClass):
                         <Link inputowner="2" indexofinput="2" outputowner="0" indexofoutput="2" />
                         <Link inputowner="1" indexofinput="2" outputowner="6" indexofoutput="4" />
                         <Link inputowner="1" indexofinput="4" outputowner="1" indexofoutput="7" />
-                        <Link inputowner="6" indexofinput="2" outputowner="0" indexofoutput="5" />
-                        <Link inputowner="6" indexofinput="3" outputowner="0" indexofoutput="6" />
                         <Link inputowner="1" indexofinput="5" outputowner="1" indexofoutput="8" />
                         <Link inputowner="5" indexofinput="4" outputowner="5" indexofoutput="7" />
                         <Link inputowner="5" indexofinput="5" outputowner="5" indexofoutput="8" />
+                        <Link inputowner="1" indexofinput="2" outputowner="0" indexofoutput="5" />
                     </Diagram>
                 </BehaviorKeyframe>
             </BehaviorLayer>
